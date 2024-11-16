@@ -1,0 +1,65 @@
+<!-- atm/templates/atm/deposit.html
+<h2>Deposit Funds</h2>
+<form method="post">
+    {% csrf_token %}
+    <label>Enter Amount:</label>
+    <input type="number" name="amount" min="1" required>
+    <button type="submit">Deposit</button>
+</form>
+<a href="{% url 'dashboard' %}">Back to Dashboard</a> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit Money</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background: #ffffff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input[type="number"], button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Deposit Money</h2>
+        <form method="post">
+            {% csrf_token %}
+            <label for="amount">Enter Amount:</label>
+            <input type="number" id="amount" name="amount" min="1" required>
+            <button type="submit">Deposit</button>
+        </form>
+        <a href="{% url 'dashboard' %}">Back to Dashboard</a>
+    </div>
+</body>
+</html>
